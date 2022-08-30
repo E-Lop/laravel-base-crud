@@ -8,7 +8,11 @@
 </head>
 <body>
     <header>
-        Header
+        <a href="{{ route('home') }}">Home</a>
+    </header>
+    
+    <header>
+        <a href="{{ route('comics.index') }}">Comics</a>
     </header>
 
     <main>

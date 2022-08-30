@@ -11,5 +11,6 @@
             <div>Prezzo: {{$comic->price}}</div>
             <div>Descrizione: {{$comic->description}}</div>
         </div>
+        <br>
     @endforeach
 @endsection
