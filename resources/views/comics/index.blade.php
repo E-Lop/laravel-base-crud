@@ -9,7 +9,7 @@
             <div><img src="{{$comic->thumb}}" alt="{{$comic->title}}"></div>
             <div>Serie: {{$comic->series}}</div>
             <div>Data di pubblicazione: {{$comic->sale_date}}</div>
-            <div>Prezzo: {{$comic->price}}</div>
+            <div>Prezzo: {{$comic->price}}$</div>
             <div>Descrizione: {{$comic->description}}</div>
         </div>
         <br>
