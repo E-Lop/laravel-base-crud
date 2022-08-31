@@ -12,6 +12,13 @@
             <div>Prezzo: {{$comic->price}}$</div>
             <div>Descrizione: {{$comic->description}}</div>
         </div>
+        <div>
+            <a href="{{ route('comics.show', ['comic' => $comic->id]) }}">Scopri di più</a>
+        </div>
+
+        <div>
+            <a href="{{ route('comics.edit', ['comic' => $comic->id]) }}">Modifica prodotto</a>
+        </div>
         <br>
     @endforeach
 @endsection
