@@ -3,6 +3,17 @@
 @section('main_content')
     <h1>Crea un nuovo prodotto</h1>
 
+    {{-- gestione messaggi di errore --}}
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+    
     <form action="{{ route('comics.store') }}" method="post">
         @csrf
 

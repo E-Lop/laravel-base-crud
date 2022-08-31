@@ -43,7 +43,7 @@ class ComicController extends Controller
     {
 
         // validazione
-        $request->validate($this->getValidationRules())
+        $request->validate($this->getValidationRules());
         
         $form_data = $request->all();
 
@@ -105,18 +105,16 @@ class ComicController extends Controller
         //
     }
 
-    {
-        // regole di validazione
-        protected function getValidationRules() {
-            return [
-                'title' => 'required|max:100'
-                'description' => 'required|max:60000'
-                'thumb' => 'required|max:60000'
-                'price' => 'required|max:4'
-                'series' => 'required|max:50'
-                'sale_date' => 'required|date'
-                'type' => 'required|max:20'
-            ]
-        }
+    // regole di validazione
+    protected function getValidationRules() {
+        return [
+            'title' => 'required|max:100',
+            'description' => 'required|max:60000',
+            'thumb' => 'required|max:60000',
+            'price' => 'required|max:4',
+            'series' => 'required|max:50',
+            'sale_date' => 'required|date',
+            'type' => 'required|max:20'
+        ];
     }
 }
