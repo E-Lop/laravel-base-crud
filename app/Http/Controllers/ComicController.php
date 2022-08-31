@@ -45,7 +45,7 @@ class ComicController extends Controller
 
         $new_comic = new Comic();
         $new_comic->fill($form_data);
-        $new_pasta->save();
+        $new_comic->save();
 
         return redirect()->route('comics.show', ['comic' => $new_comic->id]);
     }

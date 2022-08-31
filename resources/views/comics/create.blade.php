@@ -3,7 +3,7 @@
 @section('main_content')
     <h1>Crea un nuovo prodotto</h1>
 
-    <form action="{{ route('comics.store') }}">
+    <form action="{{ route('comics.store') }}" method="post">
         @csrf
 
         <div>
