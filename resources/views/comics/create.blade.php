@@ -19,38 +19,38 @@
 
         <div>
             <label for="title">Titolo</label>
-            <input type="text" id="title" name="title">
+            <input type="text" id="title" name="title" value="{{ old('title') }}">
         </div>
         <br>
         
         <div>
             <label for="description">Descrizione</label>
-            <textarea name="description" id="description" cols="30" rows="10"></textarea>
+            <textarea name="description" id="description" cols="30" rows="10">{{ old('description') }}</textarea>
         </div>
         <br>
         <div>
             <label for="thumb">Url immagine</label>
-            <input type="text" id="thumb" name="thumb">
+            <input type="text" id="thumb" name="thumb" value="{{ old('thumb') }}">
         </div>
         <br>
         <div>
             <label for="price">Prezzo</label>
-            <input type="text" id="price" name="price">
+            <input type="text" id="price" name="price" value="{{ old('price') }}">
         </div>
         <br>
         <div>
             <label for="series">Serie</label>
-            <input type="text" id="series" name="series">
+            <input type="text" id="series" name="series" value="{{ old('series') }}">
         </div>
         <br>
         <div>
             <label for="sale_date">Data di pubblicazione</label>
-            <input type="date" id="sale_date" name="sale_date">
+            <input type="date" id="sale_date" name="sale_date" value="{{ old('sale_date') }}">
         </div>
         <br>
         <div>
             <label for="type">Tipo di prodotto</label>
-            <input type="text" id="type" name="type">
+            <input type="text" id="type" name="type" value="{{ old('type') }}">
         </div>
         <br>
 
