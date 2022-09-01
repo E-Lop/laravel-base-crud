@@ -128,7 +128,7 @@ class ComicController extends Controller
             'title' => 'required|max:100',
             'description' => 'required|max:60000',
             'thumb' => 'required|max:60000',
-            'price' => 'required|max:5',
+            'price' => 'required|max:5|gt:0|numeric',
             'series' => 'required|max:50',
             'sale_date' => 'required|date',
             'type' => 'required|max:20'
