@@ -1,59 +1,61 @@
 @extends('layouts.app')
 
 @section('main_content')
-    <h1>Crea un nuovo prodotto</h1>
+    <div class="container">
+        <h1 class="text-center">Crea un nuovo prodotto</h1>
 
-    {{-- gestione messaggi di errore --}}
-    @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
-    
-    <form action="{{ route('comics.store') }}" method="post">
-        @csrf
-
-        <div>
-            <label for="title">Titolo</label>
-            <input type="text" id="title" name="title" value="{{ old('title') }}">
-        </div>
-        <br>
+        {{-- gestione messaggi di errore --}}
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         
-        <div>
-            <label for="description">Descrizione</label>
-            <textarea name="description" id="description" cols="30" rows="10">{{ old('description') }}</textarea>
-        </div>
-        <br>
-        <div>
-            <label for="thumb">Url immagine</label>
-            <input type="text" id="thumb" name="thumb" value="{{ old('thumb') }}">
-        </div>
-        <br>
-        <div>
-            <label for="price">Prezzo</label>
-            <input type="text" id="price" name="price" value="{{ old('price') }}">
-        </div>
-        <br>
-        <div>
-            <label for="series">Serie</label>
-            <input type="text" id="series" name="series" value="{{ old('series') }}">
-        </div>
-        <br>
-        <div>
-            <label for="sale_date">Data di pubblicazione</label>
-            <input type="date" id="sale_date" name="sale_date" value="{{ old('sale_date') }}">
-        </div>
-        <br>
-        <div>
-            <label for="type">Tipo di prodotto</label>
-            <input type="text" id="type" name="type" value="{{ old('type') }}">
-        </div>
-        <br>
+        <form action="{{ route('comics.store') }}" method="post">
+            @csrf
 
-        <input type="submit" value="Salva">
-    </form>
+            <div class="mb-3">
+                <label for="title" class="form-label">Titolo</label>
+                <input type="text" class="form-control" id="title" name="title" value="{{ old('title') }}">
+            </div>
+            
+            
+            <div class="mb-3">
+                <label for="description" class="form-label">Descrizione</label>
+                <textarea name="description" class="form-control" id="description" cols="30" rows="10">{{ old('description') }}</textarea>
+            </div>
+            
+            <div class="mb-3">
+                <label for="thumb" class="form-label">Url immagine</label>
+                <input type="text" class="form-control" id="thumb" name="thumb" value="{{ old('thumb') }}">
+            </div>
+            
+            <div class="mb-3">
+                <label for="price" class="form-label">Prezzo</label>
+                <input type="text" class="form-control" id="price" name="price" value="{{ old('price') }}">
+            </div>
+            
+            <div class="mb-3">
+                <label for="series" class="form-label">Serie</label>
+                <input type="text" class="form-control" id="series" name="series" value="{{ old('series') }}">
+            </div>
+            
+            <div class="mb-3">
+                <label for="sale_date" class="form-label">Data di pubblicazione</label>
+                <input type="date" class="form-control" id="sale_date" name="sale_date" value="{{ old('sale_date') }}">
+            </div>
+            
+            <div class="mb-3">
+                <label for="type" class="form-label">Tipo di prodotto</label>
+                <input type="text" class="form-control" id="type" name="type" value="{{ old('type') }}">
+            </div>
+            
+
+            <input type="submit" class="btn btn-primary" value="Salva">
+        </form>
+    </div>
 @endsection

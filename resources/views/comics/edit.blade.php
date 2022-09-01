@@ -2,7 +2,8 @@
 
 @section('main_content')
 
-    <h1>Modifica del prodotto</h1>
+    <div class="container">
+        <h1 class="text-center">Modifica del prodotto</h1>
 
     @if ($errors->any())
         <div class="alert alert-danger">
@@ -18,44 +19,45 @@
         @csrf
         @method('PUT')
 
-        <div>
-            <label for="title">Titolo</label>
-            <input type="text" id="title" name="title" value="{{ old('title') ? old('title') : $comic->title }}">
+        <div class="mb-3">
+            <label for="title" class="form-label">Titolo</label>
+            <input type="text" class="form-control" id="title" name="title" value="{{ old('title') ? old('title') : $comic->title }}">
         </div>
-        <br>
         
-        <div>
-            <label for="description">Descrizione</label>
-            <textarea name="description" id="description" cols="30" rows="10">{{ old('description') ? old('description') : $comic->description }}</textarea>
+        
+        <div class="mb-3">
+            <label for="description" class="form-label">Descrizione</label>
+            <textarea name="description" class="form-control" id="description" cols="30" rows="10">{{ old('description') ? old('description') : $comic->description }}</textarea>
         </div>
-        <br>
-        <div>
-            <label for="thumb">Url immagine</label>
-            <input type="text" id="thumb" name="thumb" value="{{ old('thumb') ? old('thumb') : $comic->thumb }}">
+        
+        <div class="mb-3">
+            <label for="thumb" class="form-label">Url immagine</label>
+            <input type="text" class="form-control" id="thumb" name="thumb" value="{{ old('thumb') ? old('thumb') : $comic->thumb }}">
         </div>
-        <br>
-        <div>
-            <label for="price">Prezzo</label>
-            <input type="text" id="price" name="price" value="{{ old('price') ? old('price') : $comic->price }}">
+        
+        <div class="mb-3">
+            <label for="price" class="form-label">Prezzo</label>
+            <input type="text" class="form-control" id="price" name="price" value="{{ old('price') ? old('price') : $comic->price }}">
         </div>
-        <br>
-        <div>
-            <label for="series">Serie</label>
-            <input type="text" id="series" name="series" value="{{ old('series') ? old('series') : $comic->series }}">
+        
+        <div class="mb-3">
+            <label for="series" class="form-label">Serie</label>
+            <input type="text" class="form-control" id="series" name="series" value="{{ old('series') ? old('series') : $comic->series }}">
         </div>
-        <br>
-        <div>
-            <label for="sale_date">Data di pubblicazione</label>
-            <input type="date" id="sale_date" name="sale_date" value="{{ old('sale_date') ? old('sale_date') : $comic->sale_date }}">
+        
+        <div class="mb-3">
+            <label for="sale_date" class="form-label">Data di pubblicazione</label>
+            <input type="date" class="form-control" id="sale_date" name="sale_date" value="{{ old('sale_date') ? old('sale_date') : $comic->sale_date }}">
         </div>
-        <br>
-        <div>
-            <label for="type">Tipo di prodotto</label>
-            <input type="text" id="type" name="type" value="{{ old('type') ? old('type') : $comic->type }}">
+        
+        <div class="mb-3">
+            <label for="type" class="form-label">Tipo di prodotto</label>
+            <input type="text" class="form-control" id="type" name="type" value="{{ old('type') ? old('type') : $comic->type }}">
         </div>
-        <br>
+        
 
         <input type="submit" value="Salva">
     </form>
+    </div>
     
 @endsection
