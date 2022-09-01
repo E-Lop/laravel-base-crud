@@ -2,6 +2,13 @@
 
 @section('main_content')
     <div class="container">
+        @if ($deleted === 'yes')
+            <div class="alert alert-success" role="alert">
+                Fumetto eliminato con successo
+            </div>
+        @endif
+
+
         <h1 class="text-center">Ecco i nostri fumetti</h1>
         
         <div class="row row-cols-3 gy-4">
